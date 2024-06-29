@@ -22,7 +22,7 @@ passport.use(
 		{
 			clientID: process.env.GITHUB_CLIENT_ID,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET,
-			callbackURL: "https://localhost:3000/api/auth/github/callback",
+			callbackURL: "https://git-hub-app-k5za.onrender.com/api/auth/github/callback",
 		},
 		async function (accessToken, refreshToken, profile, done) {
 			const user = await User.findOne({ username: profile.username });
